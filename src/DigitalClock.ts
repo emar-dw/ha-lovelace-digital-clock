@@ -125,10 +125,22 @@ export class DigitalClock extends LitElement {
     }
 
     protected render(): TemplateResult | void {
+        // Defaults
+        const firstLineFontSize = this._config?.firstLineFontSize ?? '2.8em';
+        const firstLineFontWeight = this._config?.firstLineFontWeight ?? 'bold';
+        const secondLineFontSize = this._config?.secondLineFontSize ?? '1.6em';
+        const secondLineFontWeight = this._config?.secondLineFontWeight ?? 'bold';
+
         return html`
             <ha-card>
-                <span class="first-line">${this._firstLine}</span>
-                <span class="second-line">${this._secondLine}</span>
+                <span
+                    class="first-line"
+                    style="font-size: ${firstLineFontSize}; font-weight: ${firstLineFontWeight};"
+                >${this._firstLine}</span>
+                <span
+                    class="second-line"
+                    style="font-size: ${secondLineFontSize}; font-weight: ${secondLineFontWeight};"
+                >${this._secondLine}</span>
             </ha-card>
         `;
     }
