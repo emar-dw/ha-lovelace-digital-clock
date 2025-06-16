@@ -11,8 +11,8 @@
     "custom-cards"
   ],
   "module": "dist/DigitalClock.js",
-  "repository": "git@github.com:wassy92x/lovelace-digital-clock.git",
-  "author": "Fabian Wassenhoven <info@it-creators.de>",
+  "repository": "git@github.com:emv-dw/ha-lovelace-digital-clock.git",
+  "author": "Emar Vegt",
   "license": "MIT",
   "dependencies": {
     "custom-card-helpers": "^1.9.0",
