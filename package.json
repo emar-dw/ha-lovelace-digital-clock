@@ -1,7 +1,7 @@
 {
-  "name": "lovelace-digital-clock",
-  "version": "1.2.4",
-  "description": "Home Assistant Digital Clock",
+  "name": "ha-lovelace-digital-clock",
+  "version": "1.2.4b",
+  "description": "Home Assistant Digital Clock with size control",
   "keywords": [
     "home-assistant",
     "homeassistant",
