@@ -1,8 +1,8 @@
-import typescript from 'rollup-plugin-typescript2';
-import commonjs from 'rollup-plugin-commonjs';
-import nodeResolve from 'rollup-plugin-node-resolve';
-import babel from 'rollup-plugin-babel';
-import { terser } from 'rollup-plugin-terser';
+import resolve from '@rollup/plugin-node-resolve';
+import commonjs from '@rollup/plugin-commonjs';
+import typescript from '@rollup/plugin-typescript';
+import babel from '@rollup/plugin-babel';
+import terser from '@rollup/plugin-terser';
 import serve from 'rollup-plugin-serve';
 import json from '@rollup/plugin-json';
 
@@ -19,15 +19,21 @@ const serveopts = {
 };
 
 const plugins = [
-  nodeResolve({}),
+  resolve({ extensions: ['.js', '.ts'] }),
   commonjs(),
   typescript(),
   json(),
   babel({
+    babelHelpers: 'bundled',
+    extensions: ['.js', '.ts'],
+    presets: [
+      '@babel/preset-env',
+      '@babel/preset-typescript'
+    ],
     exclude: 'node_modules/**',
   }),
   dev && serve(serveopts),
-  !dev && terser(),
+  !dev && terser({ ecma: 2020 }),
 ];
 
 export default [
@@ -36,7 +42,8 @@ export default [
     output: {
       dir: 'dist',
       format: 'es',
+      sourcemap: true,
     },
-    plugins: [...plugins],
+    plugins: plugins.filter(Boolean),
   },
 ];

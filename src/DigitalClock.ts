@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import {css, CSSResult, html, LitElement, PropertyValues, TemplateResult} from 'lit';
-import {customElement, property, state} from 'lit/decorators';
+import {customElement, property, state} from 'lit/decorators.js';
 import {DateTime} from 'luxon';
 import {HomeAssistant} from 'custom-card-helpers';
 
@@ -17,13 +17,13 @@ console.info(
 // This puts your card into the UI card picker dialog
 (window as any).customCards = (window as any).customCards || [];
 (window as any).customCards.push({
-    type: 'digital-clock',
-    name: 'DigitalClock',
+    type: 'digital-clock-resizable',
+    name: 'DigitalClockResizable',
     description: 'A digital clock component with size control',
 });
 
-@customElement('digital-clock')
-export class DigitalClock extends LitElement {
+@customElement('digital-clockiresizable')
+export class DigitalClockResizable extends LitElement {
     @property({attribute: false}) public hass!: HomeAssistant;
     @state() private _firstLine = '';
     @state() private _secondLine = '';
