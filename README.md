@@ -2,7 +2,6 @@
 
 A custom digital clock card for Home Assistant with resizing controls. Forked from wassy92x/lovelace-digital-clock
 
-[![GitHub Release][releases-shield]][releases]
 [![hacs_badge](https://img.shields.io/badge/HACS-Default-orange.svg?style=for-the-badge)](https://github.com/hacs/integration)
 [![License][license-shield]](LICENSE.md)
 
