@@ -9,7 +9,7 @@ import IDigitalClockConfig from './IDigitalClockConfig';
 
 /* eslint no-console: 0 */
 console.info(
-    `%c  Digital-Clock \n%c  Version ${CARD_VERSION}    `,
+    `%c  Digital-Clock-Resizable \n%c  Version ${CARD_VERSION}    `,
     'color: orange; font-weight: bold; background: black',
     'color: white; font-weight: bold; background: dimgray',
 );
@@ -19,7 +19,7 @@ console.info(
 (window as any).customCards.push({
     type: 'digital-clock',
     name: 'DigitalClock',
-    description: 'A digital clock component',
+    description: 'A digital clock component with size control',
 });
 
 @customElement('digital-clock')
