@@ -1,4 +1,5 @@
 {
     "name": "Digital Clock with size control",
-    "render_readme": true
+    "render_readme": true,
+    "filename": "dist/DigitalClock.js"
 }
